@@ -1,0 +1,26 @@
+{
+  "name": "cucumberbdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean-report":"rm -rf allure results allure-report ",
+    "qa": "bddgen && ENVIRONMENT=qa playwright test --headed",
+    "uat": "bddgen && ENVIRONMENT=uat playwright test --headed",
+    "report": "playwright show-report",
+    "allure-report": "npx allure generate allure-results --clean && npx allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.3",
+    "allure-commandline": "^2.42.1",
+    "allure-playwright": "^3.10.0",
+    "playwright-bdd": "^9.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

@@ -1,0 +1,19 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+#EnvironmentFiles
+.env
+.env.*
+
+#Allurereport
+allure-report
+allure-results
+
+#Generated BDD files
+.features-gen
