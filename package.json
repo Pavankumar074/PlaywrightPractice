@@ -5,6 +5,7 @@
   "scripts": {
     "clean-report":"rm -rf allure results allure-report ",
     "qa": "bddgen && ENVIRONMENT=qa playwright test --headed",
+    "actions": "bddgen && ENVIRONMENT=qa playwright test",
     "uat": "bddgen && ENVIRONMENT=uat playwright test --headed",
     "report": "playwright show-report",
     "allure-report": "npx allure generate allure-results --clean && npx allure open"
