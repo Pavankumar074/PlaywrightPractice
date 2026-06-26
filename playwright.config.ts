@@ -14,7 +14,7 @@ export const bddConfig = defineBddConfig({
 });
 
 export default defineConfig({
-  fullyParallel:false,
+  fullyParallel:true,
   testDir: bddConfig,
   retries: 2,
   reporter: [['html'],['allure-playwright']],
