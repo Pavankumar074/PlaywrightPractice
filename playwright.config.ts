@@ -19,6 +19,7 @@ export default defineConfig({
   retries: 2,
   reporter: [['html'],['allure-playwright']],
   use: {
+    headless: process.env.CI? true : false,
     baseURL: process.env.BASE_URL,
     video: 'off',
     trace: 'retain-on-failure',
