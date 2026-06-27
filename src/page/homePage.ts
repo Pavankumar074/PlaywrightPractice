@@ -1,4 +1,4 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, expect,Locator } from "@playwright/test";
 
 export class HomePage {
   private readonly page;
@@ -31,6 +31,7 @@ export class HomePage {
   }
 
   async clickOnHamburger() {
+    await expect(this.hamburger).toBeVisible({ timeout: 30000 });
     await this.hamburger.click();
   }
 

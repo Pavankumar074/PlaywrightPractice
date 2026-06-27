@@ -16,6 +16,7 @@ export class CartPage{
     }
 
     async clickOnRemoveBuutonIncartPage(){
+        await expect(this.removeButton).toBeVisible({ timeout: 30000 });
         await this.removeButton.click()
     }
 
