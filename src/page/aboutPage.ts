@@ -11,7 +11,7 @@ export class AboutPage{
     }
 
     async verifySauceLabsLogoVisible(){
-        await expect(this.sauceLabsLogo.isVisible).toBeTruthy()
+        await expect(this.sauceLabsLogo).toBeVisible()
     }
 
 }
