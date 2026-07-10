@@ -18,6 +18,7 @@ pipeline {
         // Secret Text credentials
         SAUCE_USERNAME = credentials('SAUCE_USERNAME')
         SAUCE_PASSWORD = credentials('SAUCE_PASSWORD')
+        API_URL = credentials('API_URL')
     }
 
     options {
