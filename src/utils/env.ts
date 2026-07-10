@@ -13,5 +13,6 @@ export const env={
     userName: getEnvVariable('USERNAME'),
     password: getEnvVariable('PASSWORD'),
     baseUrl: getEnvVariable('BASE_URL'),
+    apibaseUrl: getEnvVariable('API_URL')
 
 }
