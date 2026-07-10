@@ -1,7 +1,6 @@
 import { request, APIRequestContext, APIResponse, expect } from "@playwright/test";
 import { Given, When, Then } from '../fixtures/fixtures'
 import { env } from '../utils/env'
-import { DataTable } from "playwright-bdd";
 import fs from 'fs';
 
 let apiContext: APIRequestContext

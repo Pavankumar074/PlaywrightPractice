@@ -16,7 +16,7 @@ export const bddConfig = defineBddConfig({
 export default defineConfig({
   fullyParallel:false,
   testDir: bddConfig,
-  retries: 2,
+  retries: 1,
   reporter: [['html'],['allure-playwright']],
   use: {
     headless: process.env.CI? true : false,
