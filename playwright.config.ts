@@ -21,7 +21,7 @@ export default defineConfig({
   use: {
     headless: process.env.CI? true : false,
     baseURL: process.env.BASE_URL,
-    video: 'off',
+    video: 'on',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },

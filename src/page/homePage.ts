@@ -20,9 +20,7 @@ export class HomePage {
   }
 
   async addItemToCart(productName: string) {
-    await this.page
-      .locator(this.beforeXpath + productName + this.afterXpath)
-      .click();
+    await this.page.locator(this.beforeXpath + productName + this.afterXpath).click();
   }
 
   async clickOnCartButton() {

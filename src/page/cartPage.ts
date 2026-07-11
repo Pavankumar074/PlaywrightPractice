@@ -8,19 +8,19 @@ export class CartPage{
     constructor(page:Page){
         this.page=page;
         this.cartItem=this.page.locator('.inventory_item_name')
-        this.removeButton=this.page.getByText("Remove")
+        this.removeButton=this.page.locator("//button[text()='Remove']")
     }
 
     async verifyItemInCart(productName:string){
        expect(await this.cartItem.innerText()).toContain(productName);
     }
 
-    async clickOnRemoveBuutonIncartPage(){
-        await expect(this.removeButton).toBeVisible({ timeout: 30000 });
+    async clickOnRemoveButtonIncartPage(){
+        await expect(this.removeButton).toBeVisible();
         await this.removeButton.click()
     }
 
     async verifyItemIsRemovedFromCart(productName:string){
-          expect(await this.cartItem.innerText())
+        await expect(this.cartItem).not.toBeVisible();
     }
 }

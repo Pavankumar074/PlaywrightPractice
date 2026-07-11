@@ -11,7 +11,7 @@ Feature: Cart Functionality
         Given user is on the homepage
         When I click on the add to cart button for a "<product>"
         And the "<product>" should be added to the cart
-        When I click on remove buttom
+        When I click on remove button
         Then Item "<product>" should be removed from the cart 
 
     Examples:
