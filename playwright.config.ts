@@ -1,6 +1,8 @@
 import {defineConfig,devices} from '@playwright/test';
 import {defineBddConfig} from 'playwright-bdd';
 import dotenv from 'dotenv';
+import path from 'path';
+
 
 const environment = process.env.ENVIRONMENT || 'qa';
 dotenv.config({
@@ -18,6 +20,12 @@ export default defineConfig({
   testDir: bddConfig,
   retries: 1,
   reporter: [['html'],['allure-playwright']],
+  snapshotPathTemplate: path.join(
+    "{projectName}",
+    "..",
+    "visual-baselines",
+    "{arg}{ext}"
+  ),
   use: {
     headless: process.env.CI? true : false,
     baseURL: process.env.BASE_URL,
