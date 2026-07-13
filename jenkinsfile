@@ -14,11 +14,11 @@ pipeline {
     environment {
         ENV = 'qa'
         BASE_URL = 'https://www.saucedemo.com/'
-        //API_URL='https://restful-booker.herokuapp.com/'
+        API_URL='https://restful-booker.herokuapp.com/'
 
         // Secret Text credentials
-        SAUCE_USERNAME = credentials('SAUCE_USERNAME')
-        SAUCE_PASSWORD = credentials('SAUCE_PASSWORD')
+        USERNAME = credentials('SAUCE_USERNAME')
+        PASSWORD = credentials('SAUCE_PASSWORD')
     }
 
     options {
